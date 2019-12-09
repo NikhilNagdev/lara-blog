@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('client.posts.all-posts');
 });
+
+
+Route::get('/single-post', function () {
+    return view('client.posts.single-post');
+});
+
+Route::get('/admin/post/create', function () {
+    return view('admin.pages.post.create');
+})->name("post.create");
+
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+Route::resource('admin/post', 'PostController');
