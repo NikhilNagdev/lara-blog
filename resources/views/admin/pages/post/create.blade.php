@@ -55,8 +55,8 @@
                     <label for="post_cat_id">Post Category</label>
                     <?php
 //                    include_once ("../includes/functions.php");
-//                    $categories = getAllCategories();
-//                    $categories_count = count($categories);
+//                    $category = getAllCategories();
+//                    $categories_count = count($category);
 //
 //                    $i=0;
                     ?>
@@ -64,8 +64,8 @@
                     <select  class="form-control" name="post_cat_id" id="post_cat_id" >
                         <?php
 //                        while ($i<$categories_count){
-//                            $cat_id  = $categories[$i]['cat_id'];
-//                            $cat_title  = $categories[$i]['cat_title'];
+//                            $cat_id  = $category[$i]['cat_id'];
+//                            $cat_title  = $category[$i]['cat_title'];
 //                            echo "<option value='$cat_id'>$cat_title</option>";
 //                            $i++;
 //                        }

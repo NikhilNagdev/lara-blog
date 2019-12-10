@@ -28,4 +28,10 @@ Route::get('/admin/post/create', function () {
 Route::get('/admin', function () {
     return view('admin.index');
 });
+
+Route::get('/admin/category/create', function () {
+    return view('admin.pages.category.create');
+})->name("category.create");
+
 Route::resource('admin/post', 'PostController');
+Route::resource('admin/category', 'CategoryController');

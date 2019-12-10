@@ -48,8 +48,8 @@
         </a>
         <div id="categories" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="utilities-color.html">Add Category</a>
-                <a class="collapse-item" href="utilities-border.html">View All Categories</a>
+                <a class="collapse-item" href="{{ route('category.create') }}">Add Category</a>
+                <a class="collapse-item" href="{{ route('category.index') }}">View All Categories</a>
             </div>
         </div>
     </li>
