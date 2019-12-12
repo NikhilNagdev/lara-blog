@@ -35,3 +35,4 @@ Route::get('/admin/category/create', function () {
 
 Route::resource('admin/post', 'PostController');
 Route::resource('admin/category', 'CategoryController');
+Route::resource('admin/comment', 'CommentController');
