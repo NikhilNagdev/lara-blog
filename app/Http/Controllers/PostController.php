@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Post;
 
 class PostController extends Controller
@@ -96,5 +97,13 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getAllPosts(){
+        $posts = DB::table('posts')
+            ->join('users', 'posts.user_id', '=', 'users.id')
+            ->select('*')
+            ->get();
+        return view('client.posts.all-posts', compact('posts'));
     }
 }

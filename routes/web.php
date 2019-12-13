@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('client.posts.all-posts');
-});
-
+//Route::get('/posts', function () {
+//    return view('client.posts.all-posts');
+//})->name('post@getAllPosts');
+Route::get('/posts', 'PostController@getAllPosts');
+Route::resource('post', 'PostController');
 
 Route::get('/single-post', function () {
     return view('client.posts.single-post');
