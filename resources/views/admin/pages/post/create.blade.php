@@ -53,23 +53,11 @@
 
                 <div class="form-group">
                     <label for="post_cat_id">Post Category</label>
-                    <?php
-//                    include_once ("../includes/functions.php");
-//                    $category = getAllCategories();
-//                    $categories_count = count($category);
-//
-//                    $i=0;
-                    ?>
-
-                    <select  class="form-control" name="post_cat_id" id="post_cat_id" >
-                        <?php
-//                        while ($i<$categories_count){
-//                            $cat_id  = $category[$i]['cat_id'];
-//                            $cat_title  = $category[$i]['cat_title'];
-//                            echo "<option value='$cat_id'>$cat_title</option>";
-//                            $i++;
-//                        }
-                        ?>
+                    <select  class="form-control" name="category_id" id="category_id" >
+                        <option value="" disabled selected>Select category here</option>
+                        @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{ $category->category_title }}</option>
+                        @endforeach
                     </select>
                 </div>
 

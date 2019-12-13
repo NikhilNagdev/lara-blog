@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 use App\Post;
 
@@ -25,7 +26,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.post.create');
+        $categories = Category::all();
+        return view('admin.pages.post.create', compact('categories'));
     }
 
     /**
@@ -37,7 +39,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         Post::create([
-            "category_id"=>1,
+            "category_id"=>$request['category_id'],
             "user_id"=>1,
             "post_title"=>$request['post_title'],
             "post_date_time"=>date('y-m-d H:i:s'),
