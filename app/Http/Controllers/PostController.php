@@ -100,10 +100,11 @@ class PostController extends Controller
     }
 
     public function getAllPosts(){
-        $posts = DB::table('posts')
-            ->join('users', 'posts.user_id', '=', 'users.id')
-            ->select('*')
-            ->get();
+//        $posts = DB::table('posts')
+//            ->join('users', 'posts.user_id', '=', 'users.id')
+//            ->select('*')
+//            ->get();
+        $posts = Post::paginate(3);
         return view('client.posts.all-posts', compact('posts'));
     }
 }

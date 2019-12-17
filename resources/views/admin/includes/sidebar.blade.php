@@ -61,8 +61,7 @@
         </a>
         <div id="comments" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="utilities-color.html">Add Comments</a>
-                <a class="collapse-item" href="utilities-border.html">View All Comments</a>
+                <a class="collapse-item" href="{{ Route('comment.index') }}">View All Comments</a>
             </div>
         </div>
     </li>
