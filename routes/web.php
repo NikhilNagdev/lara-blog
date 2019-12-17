@@ -11,9 +11,6 @@
 |
 */
 
-//Route::get('/posts', function () {
-//    return view('client.posts.all-posts');
-//})->name('post@getAllPosts');
 Route::get('/posts', 'PostController@getAllPosts');
 Route::resource('post', 'PostController');
 
