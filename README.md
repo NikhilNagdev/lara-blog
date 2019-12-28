@@ -1,2 +1,3 @@
 # lara-blog
-A basic blog website using laravel framework
+A websiteto manage and post blogs.
+Made in laravel
